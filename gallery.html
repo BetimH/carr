@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>911 — Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-fade" id="pageFade"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <!-- Logo slot: if you legally have the Porsche logo, drop it in assets/logo.png -->
+        <img src="assets/logo.png" alt="" style="height:48px;" id="brandLogo">
+        <span class="wordmark">PORSCHE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="911-models.html">Models</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="heritage.html">Heritage</a></li>
+          <li class="nav-item"><a class="nav-link" href="motorsport.html">Motorsport</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-red magnet px-3 py-2" href="contact.html">Test drive <i class="bi bi-arrow-right-short"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-5">
+    <div class="container pt-5 pb-4">
+      <h1 class="fw-bold reveal">Gallery</h1>
+      <p class="text-muted reveal mb-0">Tap any image to open the lightbox. Perfect for video tours.</p>
+
+      <div class="row g-3 mt-3">
+        <!-- Using Unsplash source IDs (free-to-use under Unsplash License). :contentReference[oaicite:6]{index=6} -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/49gi04Retc4/2200x1400"
+              src="assets/img1.jpg" alt="911 1">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/5loMARa21e8/2200x1400"
+              src="assets/img2.avif" alt="911 2">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/vycz67Emm6U/2200x1400"
+              src="assets/img3.jpg" alt="911 3">
+          </div>
+        </div>
+
+        <!-- More “real photo” variations from same IDs (different crops) -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/49gi04Retc4/2200x1401"
+              src="assets/img4.webp" alt="911 4">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/5loMARa21e8/2200x1401"
+              src="assets/img5.jpeg" alt="911 5">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card-photo glass">
+            <img data-lightbox data-full="https://source.unsplash.com/vycz67Emm6U/2200x1401"
+              src="assets/img6.avif" alt="911 6">
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 reveal">
+        <div class="glass p-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+          <div>
+            <div class="fw-bold">Want “official press” photography?</div>
+            <div class="text-muted small">You’ll need licensed/press-approved assets (I can wire them in if you provide them).</div>
+          </div>
+          <a class="btn btn-ghost magnet px-4 py-2" href="contact.html">Send assets</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose"><i class="bi bi-x-lg"></i></button>
+    <img id="lbImg" alt="">
+  </div>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between align-items-md-center">
+      <small class="disclaimer">© <span id="year"></span> Fan-made demo. Not affiliated with Porsche. :contentReference[oaicite:7]{index=7}</small>
+      <div class="d-flex gap-3 small"><a href="911-models.html">Models</a><a href="heritage.html">Heritage</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    const img = document.getElementById('brandLogo');
+    if(img){
+      img.onerror = () => img.style.display = 'none';
+      img.onload = () => { img.style.display = 'inline-block'; document.querySelector('.brand-mark')?.remove(); };
+    }
+  </script>
+</body>
+</html>

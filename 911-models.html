@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>911 — Models</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page-fade" id="pageFade"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container py-2">
+       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <!-- Logo slot: if you legally have the Porsche logo, drop it in assets/logo.png -->
+        <img src="assets/logo.png" alt="" style="height:48px;" id="brandLogo">
+        <span class="wordmark">PORSCHE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+          <li class="nav-item"><a class="nav-link active" href="911-models.html">Models</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="heritage.html">Heritage</a></li>
+          <li class="nav-item"><a class="nav-link" href="motorsport.html">Motorsport</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-red magnet px-3 py-2" href="contact.html">Test drive <i class="bi bi-arrow-right-short"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-5">
+    <div class="container pt-5 pb-4">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3">
+        <div>
+          <h1 class="fw-bold reveal">911 Models</h1>
+          <p class="text-muted reveal mb-0">
+            Pick a direction: daily-perfect, grand touring, track intent, or all-weather confidence.
+          </p>
+        </div>
+        <div class="reveal">
+          <button class="btn btn-ghost magnet px-4 py-2" id="shuffle">Shuffle pick <i class="bi bi-dice-5"></i></button>
+        </div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/carrera.png" alt="911 detail"/>
+            <div class="p-4">
+              <div class="fw-bold">Carrera</div>
+              <div class="text-muted small">The clean, classic 911 feel—balanced, sharp, usable every day.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/carreras.png" alt="911 rear"/>
+            <div class="p-4">
+              <div class="fw-bold">Carrera S</div>
+              <div class="text-muted small">More bite, more urgency—still refined, now more serious.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/gts.png" alt="911 road"/>
+            <div class="p-4">
+              <div class="fw-bold">GTS</div>
+              <div class="text-muted small">The sweet spot vibe: sportier setup with everyday sanity.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/targa.png" alt="911 alt"/>
+            <div class="p-4">
+              <div class="fw-bold">Targa</div>
+              <div class="text-muted small">Open-air style with a signature roofline and big presence.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/turbo.png" alt="911 close"/>
+            <div class="p-4">
+              <div class="fw-bold">Turbo</div>
+              <div class="text-muted small">Effortless speed. The “how is it this fast?” feeling.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="glass card-photo h-100" data-pick>
+            <img src="assets/gt.png" alt="911 night"/>
+            <div class="p-4">
+              <div class="fw-bold">GT</div>
+              <div class="text-muted small">Track intent: focus, response, and drama when you push.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 reveal">
+        <div class="glass p-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+          <div>
+            <div class="fw-bold">Want this to match your exact trim list?</div>
+            <div class="text-muted small">Tell me which trims you want and your market/country—I'll rewrite it cleanly.</div>
+          </div>
+          <a class="btn btn-red magnet px-4 py-2" href="contact.html">Enquire <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row gap-2 justify-content-between align-items-md-center">
+      <small class="disclaimer">© <span id="year"></span> Fan-made demo. Not affiliated with Porsche. :contentReference[oaicite:5]{index=5}</small>
+      <div class="d-flex gap-3 small"><a href="gallery.html">Gallery</a><a href="motorsport.html">Motorsport</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    const img = document.getElementById('brandLogo');
+    if(img){
+      img.onerror = () => img.style.display = 'none';
+      img.onload = () => { img.style.display = 'inline-block'; document.querySelector('.brand-mark')?.remove(); };
+    }
+
+    // Shuffle "pick" highlight
+    const cards = [...document.querySelectorAll('[data-pick]')];
+    document.getElementById('shuffle')?.addEventListener('click', ()=>{
+      cards.forEach(c=>{ c.style.outline=''; c.style.boxShadow=''; });
+      const c = cards[Math.floor(Math.random()*cards.length)];
+      c.style.outline = '2px solid rgba(213,0,28,.55)';
+      c.style.boxShadow = '0 28px 90px rgba(213,0,28,.18)';
+      c.scrollIntoView({behavior:'smooth', block:'center'});
+      setTimeout(()=>{ c.style.outline=''; c.style.boxShadow=''; }, 1400);
+    });
+  </script>
+</body>
+</html>
